@@ -1,0 +1,23 @@
+ body{
+    background-image: url('../images/MelbourneMap.jpg');
+    background-size: cover;
+ }
+ h1{
+   color: #2c3a15;
+ }
+ p{
+    color: #0e5202;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;/* left center right*/
+    text-decoration: none;/* underline line-through overline*/
+    text-transform: none;/* uppercase lowercase capitalize*/
+    font-weight: 400;
+    /* 100-thin 200- semi-light 300-light 400-normal 500-medium
+        600 - semibold 700-bold 800-extrabold 900-black
+     */
+    /* background-color: #d5c097;  */
+    width: 600px;
+    border-bottom: 1px solid #2f2613;
+ }
