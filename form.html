@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Form</title>
+    <!-- Font google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- end -->
+    <link rel="stylesheet" href="css/layout.css"/>
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+            <form method="get" action="#">
+                <div class="box-input">
+                    <label>Full name</label>
+                    <input type="text" name="fullname" placeholder="Full name" required/>
+                </div>
+                <div class="box-input">
+                    <label>Email</label>
+                    <input type="email" name="email" placeholder="email" required/>
+                </div>
+                <div class="box-input">
+                    <label>Tel</label>
+                    <input type="tel" name="tel" placeholder="Telephone"/>
+                </div>
+                <div class="box-input">
+                    <label>Age</label>
+                    <input type="number" name="age" placeholder="Age"/>
+                </div>
+                <div class="box-input">
+                    <label>Dob</label>
+                    <input type="date" name="DOB" placeholder="Date of birth"/>
+                </div>
+                <div class="box-input">
+                    <label>Password</label>
+                    <input type="password" name="pwd" placeholder="Password" required/>
+                </div>
+                <div class="box-input">
+                    <label>Sex</label>
+                    <label><input type="radio" name="sex" value="female"/>Female</label>
+                    <label><input type="radio" name="sex" value="male"/>Male</label>
+                </div>
+                <div class="box-input">
+                    <label>Bạn thích mẫu phụ nữ nào?</label>
+                    <label><input type="checkbox" name="like" value="xd"/>Xinh đẹp</label>
+                    <label><input type="checkbox" name="like" value="gg"/>Giỏi giang</label>
+                    <label><input type="checkbox" name="like" value="gc"/>Gợi cảm</label>
+                </div>
+                <div class="box-input">
+                    <label>Tỉnh/thành phố sinh sống</label>
+                    <select name="city">
+                        <option value="HN">HN</option>
+                        <option value="SG">SG</option>
+                    </select>
+                </div>
+                <div class="box-input">
+                    <label>Address</label>
+                    <textarea name="address" rows="10" cols="50"></textarea>
+                </div>
+                <div class="box-input">
+                   <button type="submit">Submit</button>
+                   <button type="reset">Reset</button>
+                   <button type="button">Button</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
