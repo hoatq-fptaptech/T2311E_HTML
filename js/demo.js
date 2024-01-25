@@ -71,5 +71,13 @@ var kq2 = parseInt(kq) +10; // 1810
 var rd = Math.random(); // 0<rd<1 0.00291291923
 rd = rd * 100; // 0.01244 -> 1.244
 rd = parseInt(rd); 
+console.log(rd);
 // Cho người dùng nhập vào 1 số bất kỳ (0->99)
 // sinh ra số ngẫu nhiên và xem họ có trúng giải hay không
+var dd = prompt("Nhập 1 giá trị: ");
+dd = parseInt(dd);
+if(dd == rd){
+    alert("Chúc mừng bạn đã trúng 1 tỷ");
+}else{
+    alert("Hẹn gặp lại bạn vào ngày mai hoặc ở đê");
+}
