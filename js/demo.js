@@ -58,8 +58,8 @@ tinh_tong(5,"ABC");
 //     alert("Người dùng cần tìm hiểu thêm");
 // }
 
-var kq = prompt("Bạn bao nhiêu tuổi");// string "18"
-var kq2 = parseInt(kq) +10; // 1810
+// var kq = prompt("Bạn bao nhiêu tuổi");// string "18"
+// var kq2 = parseInt(kq) +10; // 1810
 /*
     "18" => 18
     "18a" => 18
@@ -74,10 +74,37 @@ rd = parseInt(rd);
 console.log(rd);
 // Cho người dùng nhập vào 1 số bất kỳ (0->99)
 // sinh ra số ngẫu nhiên và xem họ có trúng giải hay không
-var dd = prompt("Nhập 1 giá trị: ");
-dd = parseInt(dd);
-if(dd == rd){
-    alert("Chúc mừng bạn đã trúng 1 tỷ");
-}else{
-    alert("Hẹn gặp lại bạn vào ngày mai hoặc ở đê");
+// var dd = prompt("Nhập 1 giá trị: ");
+// dd = parseInt(dd);
+// if(dd == rd){
+//     alert("Chúc mừng bạn đã trúng 1 tỷ");
+// }else{
+//     alert("Hẹn gặp lại bạn vào ngày mai hoặc ở đê");
+// }
+
+// tạo ra 1 bộ 23 số (0->99)
+// người chơi sẽ chọn 1 số mỗi lần ( tối đa 7 lần chơi) và số tiền đặt 
+// cược của ngày hôm đó. (giả sử tỉ lệ là 23đ 1 điểm -> trúng 1 số thì đc 80đ)
+// Sau 7 ngày hãy tính số tiền đã bỏ và số tiền thu được
+
+var st = 0;
+var dt = 0;
+for(var i=1;i<=7;i++){
+    var kq = [];
+    for(var j=0;j<23;j++){
+        var rd = Math.random() * 100;
+        rd = parseInt(rd);
+        kq.push(rd);
+    }
+    var lc = prompt(`Nhập số muốn đặt hôm nay (ngày thứ ${i}):`);
+    lc = parseInt(lc);
+    var td = prompt(`Nhập số tiền muốn đặt của hôm nay(ngày thứ ${i}):`);
+    td = parseInt(td);
+    st+= td;
+    kq.forEach(e=>{
+        if(e ==lc){
+            dt+= (td/23)*80;
+        }
+    })
 }
+alert(`Tổng tiền ban đầu: ${st} và số tiến thu được ${dt}`);
