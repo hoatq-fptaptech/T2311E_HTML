@@ -108,3 +108,9 @@ for(var i=1;i<=7;i++){
     })
 }
 alert(`Tổng tiền ban đầu: ${st} và số tiến thu được ${dt}`);
+
+var t = 20;
+
+var str = "Năm nay tôi 20 tuổi";
+var str2 = 'Năm nay tôi '+t+' tuổi';
+var str3 = `Năm nay tôi ${t} tuổi`;
