@@ -11,7 +11,7 @@
     <main class="section main">
         <div class="container">
             <h1>Demo JS2</h1>
-            <h2 id="number">10</h2>
+            <ul id="number"></ul>
             <h2>
                 <span id="min">10</span>
                 :

@@ -4,12 +4,20 @@
 
 var h = document.getElementById("number");
 // h.innerText = "XIN CHAO CAC BAN";
-
+// h.innerHTML = "<i>HELLO</i>";
+var colors = ["red","green","orange","deeppink"];
 var t=10;
 var it = setInterval(function(){
     // alert("Hello T2311E");
     // console.log(t);
-    h.innerText = t;
+    // h.innerText = t;
+    h.innerHTML += `<li>${t}</li>`;
+    var rd = Math.random()*4;
+    rd = parseInt(rd); // 0->3
+    var c = colors[rd];
+    var bg = colors[4-rd];
+    h.style.color = c;
+    h.style.backgroundColor = bg;
     t--;
     if(t<0){
         clearInterval(it);
