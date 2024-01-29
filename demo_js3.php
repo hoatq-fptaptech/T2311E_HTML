@@ -10,7 +10,12 @@
 <body>
     <main class="section main">
         <div class="container">
-           <div id="fan">
+            
+            <button type="button" onclick="stopFan()">Stop</button>
+            <button type="button" onclick="fan()">O1</button>
+            <button type="button" onclick="fan()">O2</button>
+            <button type="button" onclick="fan()">O3</button>
+           <div id="fan" onmouseenter="fan()" onmouseleave="stopFan()">
             <!-- <img src="images/fan.png" width="450" height="450"/> -->
            </div>
         </div>
@@ -21,7 +26,7 @@
             width: 450px;
             height: 450px;
             float: left;
-            margin: 300px;
+            margin: 200px;
             background-image: url("/images/fan.png");
             background-size: cover;
             /* background-color: #000000; */
