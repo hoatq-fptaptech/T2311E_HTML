@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="css/layout.css"/>
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+            <input type="text" id="city" placeholder="enter your city"/>
+            <button type="button" onclick="findCity()">Find</button>
+            <h1 id="cityname">Tên thành phố</h1>
+            <h2>Nhiệt độ: <span id="tmp">20</span><sup>o</sup>C</h2>
+            <h2>Độ ẩm: <span>70</span>%</h2>
+            <h2>Áp suất: <span>1000</span></h2>
+        </div>
+    </section>
+    <script type="text/javascript">
+        function findCity(){
+            // get city from input
+            var cityname = document.getElementById("city").value;
+            if(cityname.length > 0){
+                weather(cityname);
+            }
+        }
+        function weather(city){
+            var url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=09a71427c59d38d6a34f89b47d75975c&units=metric`;
+            // step 1 - call api
+            fetch(url).then(json=>json.json())
+            .then(data=>{
+                // step 2: using JSON (Render data to UI/UX)
+                // lấy được chữ Hanoi
+                document.getElementById("cityname").innerText = data.name;
+                document.getElementById("tmp").innerText = data.main.temp;
+            })
+        }
+        weather("hanoi");
+    </script>
+</body>
+</html>
