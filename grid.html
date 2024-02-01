@@ -10,15 +10,17 @@
 <body>
     <section class="section">
         <div class="container">
-            <ul id="grid">
-                
-               
+            <ul id="grid"> 
+            </ul>
+            <ul id="paginator">
+            
             </ul>
         </div>
     </section>
     <script type="text/javascript">
-        function loadProducts(){
-            var url = `https://dummyjson.com/products?limit=12&skip=0`;
+        function loadProducts(pg){
+            var skip = (pg-1)*12;
+            var url = `https://dummyjson.com/products?limit=12&skip=${skip}`;
             fetch(url).then(js=>js.json())
             .then(data=>{
                 // step 2
@@ -36,9 +38,23 @@
                     grid_html+= item_html;
                 }); 
                 document.getElementById("grid").innerHTML = grid_html;
+
+                /// paginator
+                var total = data.total;
+                var limit = 12;
+                var pages = parseInt(total/limit);
+                if(total % limit != 0){
+                    pages++;
+                }
+                var paginator_html = ``;
+                for(var i=1;i<=pages;i++){
+                    var page_html = `<li><a onclick="loadProducts(${i})" href="#">${i}</a></li>`;
+                    paginator_html+= page_html;
+                }
+                document.getElementById("paginator").innerHTML = paginator_html;
             });
         }
-        loadProducts();
+        loadProducts(1);
     </script>
 </body>
 </html>

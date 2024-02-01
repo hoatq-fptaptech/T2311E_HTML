@@ -11,6 +11,16 @@
     width: 100%;
     padding: 20px;
 }
+.box .item h2{
+    height: 60px;
+}
 .box .item img{
     aspect-ratio: 16 / 9;
+}
+#paginator li{
+    list-style: none;
+    float: left;
+    margin-right: 15px;
+    border: 1px solid black;
+    padding: 10px;
 }
