@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/layout.css"/>
+    <link rel="stylesheet" href="css/grid.css"/>
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+            <ul id="grid">
+                
+               
+            </ul>
+        </div>
+    </section>
+    <script type="text/javascript">
+        function loadProducts(){
+            var url = `https://dummyjson.com/products?limit=12&skip=0`;
+            fetch(url).then(js=>js.json())
+            .then(data=>{
+                // step 2
+                var list = data.products;
+                var grid_html = ``;
+                list.forEach(e => {
+                    var item_html = `<li class="box">
+                                    <div class="item">
+                                        <img src="${e.thumbnail}"/>
+                                        <h2>${e.title}</h2>
+                                        <p>$${e.price}</p>
+                                    </div>
+                                </li>`;
+
+                    grid_html+= item_html;
+                }); 
+                document.getElementById("grid").innerHTML = grid_html;
+            });
+        }
+        loadProducts();
+    </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+.box{
+    list-style: none;
+    float: left;
+    width: calc(100% / 3);
+    padding: 0 15px;
+    margin: 15px 0;
+}
+.box .item{
+    box-shadow: 0 0 5px #d6d6d6;
+    float: left;
+    width: 100%;
+    padding: 20px;
+}
+.box .item img{
+    aspect-ratio: 16 / 9;
+}
