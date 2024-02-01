@@ -17,6 +17,10 @@
 .box .item img{
     aspect-ratio: 16 / 9;
 }
+#paginator{
+    float: left;
+    width: 100%;
+}
 #paginator li{
     list-style: none;
     float: left;
