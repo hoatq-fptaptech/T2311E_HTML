@@ -8,6 +8,29 @@
     <link rel="stylesheet" href="css/grid.css"/>
 </head>
 <body>
+    <header class="section header">
+        <div class="container">
+            <a class="logo mobile-hide" href="#">
+                <img src="images/logo-tet-2024.svg"/>
+            </a>
+        </div>
+    </header>
+    <nav class="section menu">
+        <div class="container">
+            <span id="menu-mobile" class="menu-mobile mobile-show"><i class="fas fa-bars"></i></span>
+            <ul class="box-menu mobile-hide">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Category</a></li>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">Cart</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Register</a></li>
+            </ul>
+            <a class="menu-logo mobile-show" href="#">
+                <img src="images/logo-tet-2024.svg"/>
+            </a>
+        </div>
+    </nav>
     <section class="section">
         <div class="container">
             <ul id="grid"> 
@@ -17,6 +40,7 @@
             </ul>
         </div>
     </section>
+    <script src="https://kit.fontawesome.com/50317932e7.js" crossorigin="anonymous"></script>
     <script type="text/javascript">
         function loadProducts(pg){
             var skip = (pg-1)*12;
