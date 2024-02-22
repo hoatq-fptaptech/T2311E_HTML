@@ -17,8 +17,8 @@
     </header>
     <nav class="section menu">
         <div class="container">
-            <span id="menu-mobile" class="menu-mobile mobile-show"><i class="fas fa-bars"></i></span>
-            <ul class="box-menu mobile-hide">
+            <span id="menu-mobile" class="menu-mobile mobile-show"><i onclick="menu(this)" class="fas fa-bars"></i></span>
+            <ul id="menu" class="box-menu mobile-hide">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Category</a></li>
                 <li><a href="#">Product</a></li>
@@ -41,6 +41,18 @@
         </div>
     </section>
     <script src="https://kit.fontawesome.com/50317932e7.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        function menu(e){
+            var box_menu = document.getElementById("menu");
+            if(box_menu.classList.contains("mobile-hide")){
+                box_menu.classList.remove("mobile-hide");
+                e.classList.add("fa-times");
+            }else{
+                box_menu.classList.add("mobile-hide");
+                e.classList.remove("fa-times");
+            }
+        }
+    </script>
     <script type="text/javascript">
         function loadProducts(pg){
             var skip = (pg-1)*12;
